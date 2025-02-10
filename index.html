@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Valentín | Un Regalo Especial</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <h1 class="header-title">💖 ¡Feliz San Valentín! 💖</h1>
+        <p class="header-subtitle">Un detalle hecho con mucho amor</p>
+    </header>
+
+    <!-- Sección Inicial -->
+    <section class="valentine-section">
+        <div class="content-wrapper">
+            <h2 class="valentine-question">¿Quieres ser mi San Valentín? 🌷</h2>
+            <div class="button-container">
+                <button class="btn" id="yes-btn">Sí</button>
+                <button class="btn" id="no-btn">No</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Inicio de Sesión (Oculta por defecto) -->
+    <section class="login-section" id="login-section" style="display: none;">
+        <div class="login-container">
+          <h2>Iniciar Sesión</h2>
+          <!-- Botón de Adelanto SOLO en el Inicio de Sesión -->
+          <button class="adelanto-btn" onclick="showAdelanto()">🌟 Ver Adelanto 🌟</button>
+
+          <!-- Mensaje de habilitación -->
+          <p class="hint-text">✨ Esto se habilitará el 14 de febrero ✨</p>
+      
+          <!-- Imagen decorativa -->
+          <img src="imagenes/imagen15.jpeg" alt="Especial San Valentín" class="login-image">
+      
+          <form id="login-form">
+            <div class="form-group">
+              <label for="username">Usuario:</label>
+              <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Contraseña:</label>
+              <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+            </div>
+            <p id="error-message" class="error-message" style="display: none;">❌ Usuario o contraseña incorrectos.</p>
+            <button type="submit" class="submit-btn">Entrar</button>
+          </form>
+        </div>
+      </section>
+      
+ <!-- Sección del Tulipán con Imagen -->
+<section class="tulip-with-image-section" id="tulip-section" style="display: none;">
+    <div class="tulip-container">
+        <h2>🌷 ¡Un tulipán para ti! 🌷</h2>
+        <img src="imagenes/Tulipan.jpeg" alt="Tulipán Especial" class="tulip-image">
+        <p class="love-message">Eres el amor de mi vida ❤️</p>
+        <button class="next-btn" id="next-btn">Siguiente</button>
+    </div>
+    <div class="image-container">
+        <img src="imagenes/Imagen11.jpeg" alt="Imagen Especial" class="special-image">
+    </div>
+
+</section>
+
+<!-- Mensaje de Error (Oculto por defecto) -->
+<section class="error-section" id="error-section" style="display: none;">
+    <div class="content-wrapper">
+        <h2>Oops... 😢</h2>
+        <p>Parece que elegiste la opción incorrecta. ¡Inténtalo de nuevo! Portate serio Nayelhi.</p>
+        <button id="return-btn">Regresar</button>
+    </div>
+</section>
+
+<!-- Sección de los Candados -->
+<section class="locks-section" id="locks-section" style="display: none;">
+    <h2>🔒 Desbloquea los candados especiales 🔓</h2>
+
+    <audio id="locks-music" loop>
+        <source src="musica/cancion 2 La mujer que bota Fuego.mp4" type="audio/mp4">
+    </audio>
+
+    <div class="locks-container">
+        <!-- Candado 1 -->
+        <div class="lock-box">
+            <img src="imagenes/candado.gif" alt="Candado 1" id="lock1">
+            <input type="text" class="lock-input" id="input1" placeholder="🔑 Código">
+            <button class="enter-btn" onclick="checkLocks(1)">Enter</button>
+        
+        </div>
+
+        <!-- Candado 2 -->
+        <div class="lock-box">
+            <img src="imagenes/candado.gif" alt="Candado 2" id="lock2">
+            <input type="text" class="lock-input" id="input2" placeholder="🔑 Código">
+            <button class="enter-btn" onclick="checkLocks(2)">Enter</button>
+            
+        </div>
+
+        <!-- Candado 3 -->
+        <div class="lock-box">
+            <img src="imagenes/candado.gif" alt="Candado 3" id="lock3">
+            <input type="text" class="lock-input" id="input3" placeholder="🔑 Código">
+            <button class="enter-btn" onclick="checkLocks(3)">Enter</button>
+                    </div>
+    </div>
+
+    <!-- Botón para salir (solo en la sección de los candados) -->
+    <button class="exit-btn" onclick="showExitImage()">Salir</button>
+</section>
+
+<!-- Imagen Especial de San Valentín (Aparece al presionar "Salir") -->
+<div id="special-image-container" style="display: none;">
+    <img src="imagenes/san valentin.jpeg" alt="San Valentín Especial" class="special-image">
+    <button class="return-start-btn" onclick="returnToStart()">💖 Regresar al Inicio 💖</button>
+</div>
+
+<!-- Carta emergente -->
+<div class="love-letter" id="love-letter" style="display: none;">
+    <div class="letter-content">
+        <img src="" alt="Carta de San Valentín" id="letter-image" class="letter-background">
+        <button class="close-letter-btn" onclick="closeLetter()">Regresar</button>
+    </div>
+</div>
+
+<!-- Pie de Página -->
+<footer class="footer">
+    <p class="footer-text">Hecho con 💖 por Dann © 2025</p>
+</footer>
+
+<!-- Script -->
+<script src="script.js"></script>
+
+<!-- 🎵 Música para la Sección del Tulipán -->
+<audio id="tulip-music" loop>
+    <source src="musica/simples corazones.mpeg" type="audio/mpeg">
+</audio>
+
+<!-- 🎵 Música para la Sección de los Candados -->
+<audio id="locks-music" loop>
+    <source src="musica/cancion 2 La mujer que bota Fuego.mp4" type="audio/mp4">
+</audio>
+
+<!-- 🎵 Música al Desbloquear el Candado 1 -->
+<audio id="music1">
+    <source src="musica/cancion4 Bajo el agua.mp3" type="audio/mp3">
+</audio>
+
+<!-- 🎵 Música al Desbloquear el Candado 2 -->
+<audio id="music2">
+    <source src="musica/DARTE UN BESO.mpeg" type="audio/mpeg">
+</audio>
+
+<!-- 🎵 Música al Desbloquear el Candado 3 -->
+<audio id="music3">
+    <source src="musica/YO QUISIERA.mpeg" type="audio/mpeg">
+</audio>
+
+<script>
+    // Función para mostrar la imagen y regresar al inicio
+    function showExitImage() {
+        document.getElementById("locks-section").style.display = "none"; // Oculta la sección de los candados
+        document.getElementById("special-image-container").style.display = "flex"; // Muestra la imagen
+        stopAllMusic(); // Detiene toda la música antes de volver
+
+        // Asegurar que el botón "Regresar al Inicio" aparezca después de 500ms
+        setTimeout(() => {
+            document.querySelector(".return-start-btn").style.display = "block"; 
+        }, 500);
+    }
+
+    // Función para regresar al inicio desde la imagen especial
+    function returnToStart() {
+        document.getElementById("special-image-container").style.display = "none"; // Ocultar imagen especial
+        document.getElementById("valentine-section").style.display = "flex"; // Mostrar la pregunta inicial
+    }
+
+    // Asegurar que el botón de Salir SOLO se muestre en la sección de candados
+    document.addEventListener("DOMContentLoaded", function () {
+        const exitBtn = document.getElementById("exit-btn");
+
+        // Ocultar el botón si NO está en la sección de candados
+        setInterval(() => {
+            if (document.getElementById("locks-section").style.display === "flex") {
+                exitBtn.style.display = "block"; // Mostrar en candados
+            } else {
+                exitBtn.style.display = "none"; // Ocultar en otras secciones
+            }
+        }, 500);
+    });
+</script>
+
+<script>
+    // Función para mostrar la imagen y regresar al inicio
+    function showExitImage() {
+        document.getElementById("locks-section").style.display = "none"; // Oculta la sección de los candados
+        document.getElementById("special-image-container").style.display = "flex"; // Muestra la imagen
+        stopAllMusic(); // Detiene toda la música antes de volver
+
+        // Reproducir la imagen y hacer que el botón de volver aparezca
+        setTimeout(() => {
+            document.querySelector(".return-start-btn").style.display = "block"; 
+        }, 500);
+    }
+
+    // Función para regresar al inicio desde la imagen especial
+    function returnToStart() {
+        document.getElementById("special-image-container").style.display = "none"; // Ocultar imagen especial
+        document.getElementById("valentine-section").style.display = "flex"; // Mostrar la pregunta inicial
+    }
+
+    // Asegurar que el botón de Salir SOLO se muestre en la sección de candados
+    document.addEventListener("DOMContentLoaded", function () {
+        const exitBtn = document.getElementById("exit-btn");
+
+        // Ocultar el botón si NO está en la sección de candados
+        setInterval(() => {
+            if (document.getElementById("locks-section").style.display === "flex") {
+                exitBtn.style.display = "block"; // Mostrar en candados
+            } else {
+                exitBtn.style.display = "none"; // Ocultar en otras secciones
+            }
+        }, 500);
+    });
+</script>
+
+
+<!-- Imagen Especial de San Valentín -->
+<div id="special-image-container" style="display: none; justify-content: center; align-items: center;">
+    <img src="imagenes/san valentin.jpeg" alt="San Valentín Especial" class="special-image">
+    <button class="return-start-btn" onclick="returnToStart()">💖 Regresar al Inicio 💖</button>
+</div>
+
+<!-- 🎵 Música para el Adelanto -->
+<audio id="adelanto-music">
+    <source src="musica/CUANDO ME ENAMORO.mpeg" type="audio/mpeg">
+</audio>
+<!-- Carta emergente del Adelanto -->
+<div id="adelanto-container" style="display: none;">
+    <div class="adelanto-content">
+        <img src="imagenes/CARTA DE PRESENTACION.jpeg" alt="Carta de Adelanto" class="adelanto-image">
+        <button class="close-adelanto-btn" onclick="closeAdelanto()">Cerrar</button>
+        <audio id="adelanto-music">
+            <source src="musica/CUANDO ME ENAMORO.mpeg" type="audio/mpeg">
+        </audio>
+    </div>
+</div>

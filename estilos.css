@@ -1,0 +1,572 @@
+/* Paleta de colores */
+:root {
+  --background-color: #FFF8F0;
+  --primary-color: #FF69B4;
+  --secondary-color: #FFB6C1;
+  --text-color: #333;
+  --header-color: #FFA07A;
+  --button-hover: #E75480;
+  --red-intense: #B22222;
+  --black-intense: #000000;
+}
+
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Encabezado */
+.header {
+  text-align: center;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 25px;
+  width: 100%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-title {
+  font-size: 3rem;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.header-subtitle {
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+/* Contenedor central */
+.content-wrapper {
+  text-align: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 90%;
+  margin-top: 40px;
+}
+
+/* Pregunta principal */
+.valentine-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.valentine-question {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Botones */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 20px;
+}
+
+.btn {
+  width: 150px;
+  height: 150px;
+  background-color: #ffffff;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background-color: var(--button-hover);
+  color: white;
+}
+
+/* Estilos cuando se presiona "Sí" */
+.clicked-yes {
+  background-color: var(--red-intense) !important;
+  color: white !important;
+  border: 2px solid #8B0000 !important;
+}
+
+/* Estilos cuando se presiona "No" */
+.clicked-no {
+  background-color: var(--black-intense) !important;
+  color: white !important;
+  border: 2px solid #333333 !important;
+}
+/* Texto de habilitación */
+.hint-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #FF69B4;
+  margin-bottom: 15px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Imagen en inicio de sesión */
+.login-image {
+  max-width: 80%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Contenedor del Tulipán */
+.tulip-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  margin-top: 30px;
+  max-width: 1000px; /* Aumentado 4 veces */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Imagen del tulipán mejorada y 4 veces más grande */
+/* Sección del Tulipán con Imagen al Lado */
+.tulip-with-image-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.tulip-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF8F0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tulip-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #FF69B4;
+}
+
+.tulip-image {
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.love-message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #FF69B4;
+  text-align: center;
+}
+
+.next-btn {
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  background-color: #FF69B4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.next-btn:hover {
+  background-color: #FFB6C1;
+}
+
+/* Imagen al lado derecho */
+.image-container {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.special-image {
+  max-width: 300px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.next-btn:hover {
+  background-color: var(--secondary-color);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+
+.next-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+
+.next-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Mensaje de Error */
+.error-section {
+  display: none;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Pie de página */
+.footer {
+  background-color: var(--header-color);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 1rem;
+}
+/* Ocultar la sección de inicio de sesión al inicio */
+.login-section {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #FFD1DC, #FFF8F0);
+  padding: 30px;
+  text-align: center;
+}
+
+.login-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+/* Sección de los candados */
+.locks-section {
+  text-align: center;
+  padding: 30px;
+}
+
+.locks-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.lock-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lock-box img {
+  width: 120px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.lock-input {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 2px solid #FF69B4;
+  border-radius: 8px;
+  text-align: center;
+  width: 100px;
+}
+
+.enter-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #FF69B4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.enter-btn:hover {
+  background-color: #FFB6C1;
+}
+/* Estilos para la carta */
+.love-letter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.letter-content {
+  position: relative;
+  width: 50%;
+  max-width: 600px;
+  background-color: transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.letter-background {
+  max-width: 90%; /* Reducido del 100% al 90% */
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  margin: 0 auto; /* Centrado horizontal */
+}
+
+
+/* Estilo del botón "Regresar" */
+.close-letter-btn {
+  position: absolute;
+  bottom: 20px; /* Ajuste anterior */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #FF69B4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajuste para subir el botón */
+.close-letter-btn {
+  bottom: 50px; /* Se sube 30px más del borde inferior */
+}
+
+/* Efecto hover para el botón */
+.close-letter-btn:hover {
+  background-color: #FFB6C1;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+/* Estilo del Botón de Salir */
+.exit-btn {
+  display: block;
+  margin: 30px auto;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  background-color: #FF4C4C;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.exit-btn:hover {
+  background-color: #D43F3F;
+  transform: scale(1.1);
+}
+
+/* Imagen Especial de San Valentín */
+.special-image {
+  max-width: 85%;  /* Aumentado del 50% al 80% */
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+
+/* Estilos del Botón de Salir */
+.exit-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.exit-btn:hover {
+  background-color: #ff1a1a;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el botón de Regresar al Inicio */
+.return-start-btn {
+  display: none;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.return-start-btn:hover {
+  background-color: #ff4081;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Contenedor principal de la carta */
+#adelanto-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Contenido de la carta */
+.adelanto-content {
+  position: relative;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 90%;
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Imagen de la carta */
+.adelanto-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+/* Botón de cerrar */
+.close-adelanto-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #FF6347, #FF4500); /* Gradiente vibrante */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-adelanto-btn:hover {
+  background: linear-gradient(135deg, #FF4500, #FF6347); /* Gradiente invertido */
+  transform: scale(1.05); /* Efecto de agrandamiento */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.close-adelanto-btn:active {
+  transform: scale(0.95); /* Efecto al hacer clic */
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+.adelanto-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #FF69B4, #FF1493); /* Gradiente atractivo */
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transición para animación */
+}
+
+.adelanto-btn:hover {
+  background: linear-gradient(135deg, #FF1493, #FF69B4); /* Invertir el gradiente */
+  transform: scale(1.1); /* Efecto de agrandamiento */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Más sombra */
+}
+
+.adelanto-btn:active {
+  transform: scale(0.95); /* Efecto al hacer clic */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
